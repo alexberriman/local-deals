@@ -1,4 +1,4 @@
-# UTS:HELPS Responsive Front-End
+# Local Deals Front-End
 
 ## Guides
 * [Coding style guide](CODINGSTYLE.md)
