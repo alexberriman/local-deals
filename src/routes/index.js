@@ -7,6 +7,7 @@ import LoginRoute from './Login'
 
 // Routes: Deals
 import DealsRoute from './Deals'
+import DealRoute from './Deals/routes/View'
 
 export const createRoutes = (store) => ({
   path: '/',
@@ -23,7 +24,8 @@ export const createRoutes = (store) => ({
     {
       component: MobileLayout,
       childRoutes: [
-        DealsRoute(store)
+        DealsRoute(store),
+        DealRoute(store)
       ]
     }
   ]

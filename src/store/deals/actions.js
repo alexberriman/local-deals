@@ -17,6 +17,11 @@ export function receiveDeals(err, deals) {
   }
 }
 
+/**
+ * Retrieves a list of deals.
+ *
+ * @returns {function(*, *, *)}
+ */
 export function fetchDeals() {
   return (dispatch, getState, api) => {
     dispatch(requestDeals())

@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { push } from 'react-router-redux'
 
 import Deals from '../components/Deals'
 import { fetchDeals } from 'store/deals/actions'
@@ -7,6 +8,16 @@ import { fetchDeals } from 'store/deals/actions'
 import strings from './DealsContainer.strings.js'
 
 export default class DealsContainer extends React.Component {
+
+  /**
+   * Sets up the component.
+   *
+   * @param props
+   */
+  constructor(props) {
+    super(props)
+    this._onDealClick = ::this._onDealClick
+  }
 
   /**
    * Fetches the user's profile.
@@ -19,6 +30,16 @@ export default class DealsContainer extends React.Component {
     layout.setHeader({
       title: strings.title
     })
+  }
+
+  /**
+   * Navigates to the selected deal.
+   *
+   * @param deal
+   * @private
+   */
+  _onDealClick(deal) {
+    this.props.push(`/deal/${deal.id}`)
   }
 
   /**
@@ -37,6 +58,7 @@ export default class DealsContainer extends React.Component {
       <Deals
         {...this.props}
         deals={deals.deals}
+        onDealClick={this._onDealClick}
       />
     )
   }
@@ -44,7 +66,8 @@ export default class DealsContainer extends React.Component {
 DealsContainer.propTypes = {
   deals: React.PropTypes.object.isRequired,
   fetchDeals: React.PropTypes.func.isRequired,
-  layout: React.PropTypes.object.isRequired
+  layout: React.PropTypes.object.isRequired,
+  push: React.PropTypes.func.isRequired
 }
 
 const mapStateToProps = state => ({
@@ -52,7 +75,8 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = {
-  fetchDeals
+  fetchDeals,
+  push
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(DealsContainer)
