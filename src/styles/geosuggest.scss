@@ -1,0 +1,14 @@
+@import './variables/colors.scss';
+
+.geosuggest {
+  position: relative;
+}
+.geosuggest__suggests-wrapper {
+  background-color: #fff;
+  border: 2px solid var(--border-color);
+  border-top-width: 1px;
+  margin: 0 -2px 0 -2px;
+  position: absolute;
+  width: calc(100% + 4px);
+  z-index: 1000;
+}

@@ -1,0 +1,75 @@
+@import './variables/colors';
+
+.active::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  right: -9px;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 22px 0 22px 10px;
+  border-color: transparent transparent transparent transparent;
+}
+
+.category-all {
+  background-color: var(--category-all);
+  &.active::after {
+    border-left-color: var(--category-all);
+  }
+}
+.category-owner {
+  background-color: var(--category-owner);
+  &.active::after {
+    border-left-color: var(--category-owner);
+  }
+}
+.category-buyer {
+  background-color: var(--category-buyer);
+  &.active::after {
+    border-left-color: var(--category-buyer);
+  }
+}
+.category-hot {
+  background-color: var(--category-hot);
+  &.active::after {
+    border-left-color: var(--category-hot);
+  }
+}
+.category-warm {
+  background-color: var(--category-warm);
+  &.active::after {
+    border-left-color: var(--category-warm);
+  }
+}
+.category-listing {
+  background-color: var(--category-listing);
+  &.active::after {
+    border-left-color: var(--category-listing);
+  }
+}
+.category-bought {
+  background-color: var(--category-bought);
+  &.active::after {
+    border-left-color: var(--category-bought);
+  }
+}
+.category-sold {
+  background-color: var(--category-sold);
+  &.active::after {
+    border-left-color: var(--category-sold);
+  }
+}
+.category-private {
+  background-color: var(--category-private);
+  &.active::after {
+    border-left-color: var(--category-private);
+  }
+}
+.category-none {
+  background-color: var(--category-none);
+  &.active::after {
+    border-left-color: var(--category-none);
+  }
+}

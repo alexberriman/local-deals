@@ -1,8 +1,12 @@
 // Layouts
+import MobileLayout from 'layouts/MobileLayout'
 import NoAuthLayout from 'layouts/NoAuthLayout'
 
 // Routes
 import LoginRoute from './Login'
+
+// Routes: Deals
+import DealsRoute from './Deals'
 
 export const createRoutes = (store) => ({
   path: '/',
@@ -14,6 +18,12 @@ export const createRoutes = (store) => ({
       component: NoAuthLayout,
       childRoutes: [
         LoginRoute(store)
+      ]
+    },
+    {
+      component: MobileLayout,
+      childRoutes: [
+        DealsRoute(store)
       ]
     }
   ]
