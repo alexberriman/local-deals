@@ -1,10 +1,8 @@
 import React from 'react'
-import { Card, CardTitle, CardText } from 'material-ui/Card'
 
-import { IconPlace } from 'components/Icons'
+import DealCard from 'components/DealCard'
 
 import classes from './Deals.scss'
-import strings from './Deals.strings'
 
 export default class Deals extends React.Component {
 
@@ -12,7 +10,7 @@ export default class Deals extends React.Component {
    * Renders the Deals component.
    */
   render() {
-    const { deals } = this.props
+    const { deals, onDealClick } = this.props
 
     return (
       <div className={classes.container}>
@@ -20,6 +18,7 @@ export default class Deals extends React.Component {
           <DealCard
             deal={deal}
             key={deal.id}
+            onClick={onDealClick}
           />
         )}
       </div>
@@ -27,23 +26,9 @@ export default class Deals extends React.Component {
   }
 }
 Deals.propTypes = {
-  deals: React.PropTypes.array.isRequired
+  deals: React.PropTypes.array.isRequired,
+  onDealClick: React.PropTypes.func
 }
-
-const DealCard = ({ deal }) => (
-  <div className={classes.card}>
-    <Card>
-      <img src={deal.image_url} />
-      <CardTitle
-        subtitle={<span className={classes.subtitle}><IconPlace />{deal.location}</span>}
-        title={deal.title}
-      />
-      <CardText>
-        {deal.description}
-      </CardText>
-    </Card>
-  </div>
-)
-DealCard.propTypes = {
-  deal: React.PropTypes.object.isRequired
+Deals.defaultProps = {
+  onDealClick: () => {}
 }
