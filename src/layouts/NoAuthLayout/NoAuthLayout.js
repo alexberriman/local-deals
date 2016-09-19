@@ -5,9 +5,7 @@ import '../../styles/core.scss'
 export const NoAuthLayout = ({ children }) => (
   <div className={classes.container}>
     <div className={classes.content}>
-      {
-        children
-      }
+      {children}
     </div>
   </div>
 )
