@@ -38,14 +38,6 @@ export default class NavigationDrawer extends React.Component {
         <div className={classes.menu}>
           <ul>
             <li>
-              <Link to='/settings' className={classes.link} onClick={this.close}>
-                <IconSettings />
-                <span onClick={this.close} className={classes.text}>
-                  {strings.label_settings}
-                </span>
-              </Link>
-            </li>
-            <li>
               <Link to='/logout' className={classes.link} onClick={this.close}>
                 <IconLogout />
                 <span onClick={this.close} className={classes.text}>

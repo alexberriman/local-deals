@@ -4,6 +4,8 @@ import NoAuthLayout from 'layouts/NoAuthLayout'
 
 // Routes
 import LoginRoute from './Login'
+import LogoutRoute from './Logout'
+import NotFoundRoute from './NotFound'
 
 // Routes: Deals
 import DealsRoute from './Deals'
@@ -25,7 +27,9 @@ export const createRoutes = (store) => ({
       component: MobileLayout,
       childRoutes: [
         DealsRoute(store),
-        DealRoute(store)
+        DealRoute(store),
+        LogoutRoute(store),
+        NotFoundRoute(store)
       ]
     }
   ]
