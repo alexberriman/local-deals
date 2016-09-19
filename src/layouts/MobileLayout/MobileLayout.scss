@@ -3,12 +3,13 @@
 $header-height: 45px;
 $nav-height: 45px;
 $category-width: 75px;
-$content-height: calc(100% - #{$header-height} - #{$nav-height} + #{var(--button-height)});
+$content-height: 100%;
 
 .container {
   height: 100%;
   margin: 0 auto;
   overflow: hidden;
+  padding-bottom: 15px;
   position: relative;
   width: 100%;
 }

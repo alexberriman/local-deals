@@ -104,6 +104,9 @@ export const IconMenu = props =>
 export const IconOptions = props =>
   createIcon(props, 'more_vert')
 
+export const IconPlace = props =>
+  createIcon(props, 'place')
+
 export const IconPlaceholder = props =>
   createIcon({...props, disabled: true}, '')
 

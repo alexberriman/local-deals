@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "2-day Lift Pass only $69",
+    "location": "Thredbo",
+    "description": "A really long description about skiing etc.",
+    "image_url": "http://img6.onthesnow.com/image/la/74/early_season_skiing_grand_targhee_1_74093.jpg"
+  },
+  {
+    "id": 2,
+    "title": "3 Games of Bowling for $16",
+    "description": "A really long description about bowling etc.",
+    "location": "Harbourside Sydney",
+    "image_url": "https://rtrfm.com.au/wp-content/uploads/2016/06/bowlingleague.jpg"
+  },
+  {
+    "id": 3,
+    "title": "3 hours of Paintball fun just $39",
+    "description": "Includes pizza, 50 paintballs and equipment hire.",
+    "location": "Bass Hill",
+    "image_url": "https://psmedia.playstation.com/is/image/psmedia/GregHastingsPainball2_FeaturedImage?$TwoColumn_Legacy$"
+  }
+]
