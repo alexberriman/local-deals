@@ -27,7 +27,7 @@ export default class MobileLayout extends React.Component {
       header: this.defaultHeader,
       navigation: this.defaultNavigation,
       navigationDrawerOpen: false,
-      title: 'ScoreboardCRM'
+      title: 'Local Deals'
     }
     this.onNavigationDrawerChange = ::this.onNavigationDrawerChange
     this.openNavigationDrawer = ::this.openNavigationDrawer
