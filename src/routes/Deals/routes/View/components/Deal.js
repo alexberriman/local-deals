@@ -41,7 +41,7 @@ export default class Deal extends React.Component {
         </div>
 
         <RaisedButton
-          href={"/deal/" + deal.id + "/maps"}
+          href={"/deal/" + deal.id + "/location"}
           label="View location on maps"
           type='submit'
           fullWidth={true}
