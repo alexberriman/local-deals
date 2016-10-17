@@ -15,18 +15,22 @@ export default class Deal extends React.Component {
     return (
       <div className={classes.container}>
         <img src={deal.image_url} />
-        images
+
         <ul className={classes.images}>
           {
             deal.images.map(function(img) {
               return (
                 <li>
-                  <img src={img.src} />
+                  <a href={img.src}>
+                    <img src={img.src} />
+                  </a>
                 </li>
               )
             })
           }
         </ul>
+        <div class={classes.clearFix}></div>
+
         <h2 className={classes.title}>{deal.title}</h2>
         <span className={classes.location}>
           <IconPlace /> {deal.location}
