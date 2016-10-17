@@ -1,4 +1,5 @@
 import React from 'react'
+import RaisedButton from 'material-ui/RaisedButton'
 
 import { IconPlace } from 'components/Icons'
 
@@ -38,6 +39,14 @@ export default class Deal extends React.Component {
         <div className={classes.description}>
           {deal.description}
         </div>
+
+        <RaisedButton
+          href={"/deal/" + deal.id + "/maps"}
+          label="View location on maps"
+          type='submit'
+          fullWidth={true}
+          primary={true}
+        />
       </div>
     )
   }
