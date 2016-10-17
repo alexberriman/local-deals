@@ -2,34 +2,28 @@
   {
     "id": 1,
     "title": "2-day Lift Pass only $69",
-    "location": "Thredbo",
-    "description": "A really long description about skiing etc.",
+    "location": "210 George St, Sydney, NSW, 2000",
+    "short_desc": "Pellentesque vehicula magna ligula, quis malesuada arcu viverra et.",
+    "description": "<p>Pellentesque vehicula magna ligula, quis malesuada arcu viverra et. Nam sit amet aliquet ipsum, cursus lobortis arcu. Nunc et cursus lorem. Aliquam facilisis ullamcorper luctus. Fusce nec scelerisque quam. Aliquam sit amet lectus magna.</p>",
     "image_url": "http://img6.onthesnow.com/image/la/74/early_season_skiing_grand_targhee_1_74093.jpg",
-    "original_price": 138,
-    "price": 69,
-    "sold": 155,
     "expiry": "22 hours"
   },
   {
     "id": 2,
     "title": "3 Games of Bowling for $16",
+    "short_desc": "Pellentesque vehicula magna ligula, quis malesuada arcu viverra et.",
     "description": "A really long description about bowling etc.",
-    "location": "Harbourside Sydney",
+    "location": "310/20 Warringah Mall, Sydney, 2100",
     "image_url": "https://rtrfm.com.au/wp-content/uploads/2016/06/bowlingleague.jpg",
-    "original_price": 32,
-    "price": 16,
-    "sold": 397,
     "expiry": "6 days"
   },
   {
     "id": 3,
     "title": "3 hours of Paintball fun just $39",
+    "short_desc": "Pellentesque vehicula magna ligula, quis malesuada arcu viverra et.",
     "description": "Includes pizza, 50 paintballs and equipment hire.",
-    "location": "Bass Hill",
+    "location": "23 Bass Hill Road, Magnolia Crescent, Sydney, 2600",
     "image_url": "https://psmedia.playstation.com/is/image/psmedia/GregHastingsPainball2_FeaturedImage?$TwoColumn_Legacy$",
-    "original_price": 78,
-    "price": 39,
-    "sold": 41,
     "expiry": "13 days"
   }
 ]

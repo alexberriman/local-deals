@@ -20,23 +20,6 @@ export default class Deal extends React.Component {
         <span className={classes.location}>
           <IconPlace /> {deal.location}
         </span>
-        <section className={classes.buy}>
-          <span className={classes.price}>
-            ${deal.price}
-          </span>
-          <span className={classes.originalPrice}>
-            ${deal.original_price}
-          </span>
-          <RaisedButton
-            className={classes.btnBuy}
-            label='Buy now'
-            primary
-          />
-        </section>
-        <div className={classes.details}>
-          <span>{deal.sold} sold</span>
-          <span className={classes.right}>{deal.expiry} remaining</span>
-        </div>
         <div className={classes.description}>
           {deal.description}
         </div>
