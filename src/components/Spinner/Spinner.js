@@ -1,7 +1,7 @@
 import React from 'react'
 import classes from './Spinner.scss'
 
-export default class Spinner extends React.Component {
+class Spinner extends React.Component {
 
   _getClassName() {
     const { size, type } = this.props

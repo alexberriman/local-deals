@@ -3,7 +3,7 @@ import { IconBack, IconMenu } from 'components/Icons'
 
 import classes from './Header.scss'
 
-export default class Header extends React.Component {
+class Header extends React.Component {
 
   /**
    * Sets up the component.

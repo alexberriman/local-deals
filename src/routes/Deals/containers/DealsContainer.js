@@ -10,7 +10,7 @@ import { fetchDeals } from 'store/deals/actions'
 import classes from './DealsContainer.scss'
 import strings from './DealsContainer.strings.js'
 
-export default class DealsContainer extends React.Component {
+class DealsContainer extends React.Component {
 
   /**
    * Sets up the component.

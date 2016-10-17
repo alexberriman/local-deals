@@ -6,7 +6,7 @@ import { fetchDeal } from '../modules/actions'
 
 import strings from './DealContainer.strings.js'
 
-export default class DealContainer extends React.Component {
+class DealContainer extends React.Component {
 
   /**
    * Fetches the user's profile.
