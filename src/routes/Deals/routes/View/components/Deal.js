@@ -1,5 +1,4 @@
 import React from 'react'
-import RaisedButton from 'material-ui/RaisedButton'
 
 import { IconPlace } from 'components/Icons'
 
@@ -16,6 +15,18 @@ export default class Deal extends React.Component {
     return (
       <div className={classes.container}>
         <img src={deal.image_url} />
+        images
+        <ul className={classes.images}>
+          {
+            deal.images.map(function(img) {
+              return (
+                <li>
+                  <img src={img.src} />
+                </li>
+              )
+            })
+          }
+        </ul>
         <h2 className={classes.title}>{deal.title}</h2>
         <span className={classes.location}>
           <IconPlace /> {deal.location}

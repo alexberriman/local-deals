@@ -47,7 +47,7 @@ export default class DealCard extends React.Component {
             title={deal.title}
           />
           <CardText>
-            {deal.description}
+            {deal.short_desc}
           </CardText>
         </Card>
       </div>

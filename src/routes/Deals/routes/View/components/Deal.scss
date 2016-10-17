@@ -1,15 +1,18 @@
 .container {
   padding: 15px;
 }
+
 .title {
   font-size: 22px;
   font-weight: 600;
   margin: 15px 0;
   padding: 0 10px;
 }
+
 .location {
   color: #888;
 }
+
 .location i {
   font-size: 18px;
   left: 5px;
@@ -17,6 +20,7 @@
   margin-right: 5px;
   top: 2px;
 }
+
 .buy {
   border: 1px solid #ddd;
   border-right: 0;
@@ -25,16 +29,19 @@
   overflow: hidden;
   padding: 15px 10px;
 }
+
 .price {
   display: inline-block;
   font-size: 22px;
   margin-top: 5px;
 }
+
 .originalPrice {
   color: #999;
   margin-left: 10px;
   text-decoration: line-through;
 }
+
 .details {
   border-bottom: 1px solid #ddd;
   font-size: 14px;
@@ -42,12 +49,19 @@
   overflow: hidden;
   padding: 0 10px 10px;
 }
+
 .right {
   float: right;
 }
+
 .description {
   padding: 15px 10px;
 }
+
 .btnBuy {
   float: right;
+}
+
+.images {
+
 }
