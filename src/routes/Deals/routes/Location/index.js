@@ -6,7 +6,7 @@ export default (store) => ({
   getComponent(nextState, next) {
     require.ensure([], (require) => {
       const LocationContainer = require('./containers/LocationContainer').default
-      const dealReducer = require('./modules/reducers').dealReducer
+      const dealReducer = require('../View/modules/reducers').dealReducer
       injectReducer(store, { key: 'dealView', reducer: dealReducer })
 
       next(null, DealContainer)
