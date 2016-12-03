@@ -10,6 +10,7 @@
   width: 250px;
   z-index: 1100;
 }
+
 .user {
   background-color: #eee;
   color: #333;
@@ -19,14 +20,17 @@
   height: 175px;
   position: relative;
 }
+
 .sectionLogo {
   flex: 1 0 auto;
   position: relative;
 }
+
 .userInfo {
   flex: 0 0 auto;
   padding: 0 15px 10px;
 }
+
 .companyLogo {
   height: auto;
   max-width: 70%;
@@ -37,51 +41,63 @@
   right: 0;
   margin: auto;
 }
+
 .userInfoItem {
   display: block;
   padding: 3px 0;
 }
+
 .username {
   composes: userInfoItem;
   font-size: 18px;
 }
+
 .company {
   composes: userInfoItem;
   font-size: 12px;
 }
+
 .menu {
   overflow-y: auto;
 }
+
 .menu ul {
   padding: 10px 0;
 }
+
 .menu li {
   cursor: pointer;
   font-size: 14px;
   position: relative;
   user-select: none;
 }
+
 .menu li:active {
   background-color: #eee;
 }
+
 .menu li i {
   font-size: 24px;
   vertical-align: middle;
   width: 24px;
 }
+
 .link::before {
   content: '';
   display: inline-block;
   height: 100%;
   vertical-align: middle;
 }
+
 .menu .text {
   padding-left: 30px;
 }
+
 .link {
   display: block;
   padding: 12px 15px;
 }
+
 .shadow {
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 0;
@@ -92,15 +108,18 @@
   width: 100%;
   z-index: 1000;
 }
+
 .open .drawer {
   left: 0;
   transition: left 0.3s ease-in-out;
 }
+
 .open .shadow {
   opacity: 1;
   pointer-events: all;
   transition: opacity 0.3s ease-in-out;
 }
+
 .version {
   position: absolute;
   bottom: 10px;

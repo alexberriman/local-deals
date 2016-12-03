@@ -4,8 +4,10 @@ import { Link } from 'react-router'
 
 import {
   IconAddUser,
+  IconHome,
   IconLeaderboard,
   IconLogout,
+  IconSearch,
   IconSettings
 } from 'components/Icons'
 
@@ -37,6 +39,22 @@ export default class NavigationDrawer extends React.Component {
         </div>
         <div className={classes.menu}>
           <ul>
+            <li>
+              <Link to='/' className={classes.link} onClick={this.close}>
+                <IconHome />
+                <span onClick={this.close} className={classes.text}>
+                  {strings.label_home}
+                </span>
+              </Link>
+            </li>
+            <li>
+              <Link to='/search' className={classes.link} onClick={this.close}>
+                <IconSearch />
+                <span onClick={this.close} className={classes.text}>
+                  {strings.label_search}
+                </span>
+              </Link>
+            </li>
             <li>
               <Link to='/logout' className={classes.link} onClick={this.close}>
                 <IconLogout />

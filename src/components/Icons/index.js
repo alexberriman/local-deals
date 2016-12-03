@@ -98,6 +98,9 @@ export const IconErrorOutline = props =>
 export const IconLogout = props =>
   createIcon(props, 'exit_to_app')
 
+export const IconHome = props =>
+  createIcon(props, 'home')
+
 export const IconMenu = props =>
   createIcon(props, 'menu')
 
@@ -115,4 +118,5 @@ export const IconSearch = props =>
 
 export const IconSettings = props =>
   createIcon(props, 'settings')
+
 

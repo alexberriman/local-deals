@@ -97,6 +97,7 @@ export default (submitAction, redirectTo) => {
 
       const style = {
         height: 50,
+        width: '100%'
       }
 
       return (
@@ -133,8 +134,6 @@ export default (submitAction, redirectTo) => {
             <br />
             <div className={classes.formActions}>
               <RaisedButton
-                fullWidth="100%"
-                class="waves-effect waves-light btn-large primary-color block m-20 animated bouncein delay-4"
                 style={style}
                 primary={true}
                 label={!props.submitting && props.labelSubmit}

@@ -15,7 +15,7 @@ import DealLocationRoute from './Deals/routes/Location'
 export const createRoutes = (store) => ({
   path: '/',
   indexRoute: {
-    onEnter: (nextState, replace) => replace('/login')
+    onEnter: (nextState, replace) => replace('/deals')
   },
   childRoutes: [
     {
