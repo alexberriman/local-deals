@@ -28,3 +28,15 @@ export function fetchDeals() {
     dispatch(receiveDeals(null, dummyDeals))
   }
 }
+
+/**
+ * Retrieves a list of deals.
+ *
+ * @returns {function(*, *, *)}
+ */
+export function fetchResults() {
+  return (dispatch, getState, api) => {
+    dispatch(requestDeals())
+    dispatch(receiveDeals(null, dummyDeals))
+  }
+}

@@ -15,6 +15,7 @@ import DealLocationRoute from './Deals/routes/Location'
 // Routes: Search
 import SearchRoute from './Search'
 
+
 export const createRoutes = (store) => ({
   path: '/',
   indexRoute: {
