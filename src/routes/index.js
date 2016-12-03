@@ -34,8 +34,8 @@ export const createRoutes = (store) => ({
         DealRoute(store),
         DealLocationRoute(store),
         LogoutRoute(store),
-        NotFoundRoute(store),
-        SearchRoute(store)
+        SearchRoute(store),
+        NotFoundRoute(store)
       ]
     }
   ]

@@ -34,4 +34,4 @@ SearchForm.propTypes = {
   location: React.PropTypes.object.isRequired
 }
 
-export default connect()(DealsContainer)
+export default connect()(SearchContainer)
