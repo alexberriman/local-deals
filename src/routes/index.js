@@ -12,6 +12,9 @@ import DealsRoute from './Deals'
 import DealRoute from './Deals/routes/View'
 import DealLocationRoute from './Deals/routes/Location'
 
+// Routes: Search
+import SearchRoute from './Search'
+
 export const createRoutes = (store) => ({
   path: '/',
   indexRoute: {
@@ -31,7 +34,8 @@ export const createRoutes = (store) => ({
         DealRoute(store),
         DealLocationRoute(store),
         LogoutRoute(store),
-        NotFoundRoute(store)
+        NotFoundRoute(store),
+        SearchRoute(store)
       ]
     }
   ]
