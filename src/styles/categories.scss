@@ -19,54 +19,63 @@
     border-left-color: var(--category-all);
   }
 }
+
 .category-owner {
   background-color: var(--category-owner);
   &.active::after {
     border-left-color: var(--category-owner);
   }
 }
+
 .category-buyer {
   background-color: var(--category-buyer);
   &.active::after {
     border-left-color: var(--category-buyer);
   }
 }
+
 .category-hot {
   background-color: var(--category-hot);
   &.active::after {
     border-left-color: var(--category-hot);
   }
 }
+
 .category-warm {
   background-color: var(--category-warm);
   &.active::after {
     border-left-color: var(--category-warm);
   }
 }
+
 .category-listing {
   background-color: var(--category-listing);
   &.active::after {
     border-left-color: var(--category-listing);
   }
 }
+
 .category-bought {
   background-color: var(--category-bought);
   &.active::after {
     border-left-color: var(--category-bought);
   }
 }
+
 .category-sold {
   background-color: var(--category-sold);
   &.active::after {
     border-left-color: var(--category-sold);
   }
 }
+
 .category-private {
   background-color: var(--category-private);
   &.active::after {
     border-left-color: var(--category-private);
   }
 }
+
 .category-none {
   background-color: var(--category-none);
   &.active::after {

@@ -1,12 +1,18 @@
 .container {
   margin: 0 auto;
-  max-width: 375px;
+  max-width: 90%;
   text-align: left;
   width: 80%;
 }
+
 .input {
   width: 100% !important;
 }
+
 .formActions {
   text-align: right;
+}
+
+.loginContainer {
+  width: 100%;
 }

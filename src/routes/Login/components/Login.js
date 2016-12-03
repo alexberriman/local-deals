@@ -96,7 +96,10 @@ export default (submitAction, redirectTo) => {
       const { form, formErrors } = this.state
 
       return (
-        <CenterLayout>
+        <CenterLayout className={classes.loginContainer}>
+          <h1>{props.loginTitle}</h1>
+          <h2>{props.loginSubtitle}</h2>
+
           <form
             className={classes.container}
             onChange={this._onFieldChange}
@@ -147,7 +150,9 @@ export default (submitAction, redirectTo) => {
     hintEmail: strings.hintEmail,
     labelEmail: strings.labelEmail,
     labelPassword: strings.labelPassword,
-    labelSubmit: strings.labelSubmit
+    labelSubmit: strings.labelSubmit,
+    loginTitle: strings.loginTitle,
+    loginSubtitle: strings.loginSubtitle
   }
 
   return connectForm(Login, submitAction)
