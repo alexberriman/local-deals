@@ -15,7 +15,6 @@ class SearchContainer extends React.Component {
   constructor(props) {
     super(props)
     this.SearchForm = SearchForm(search, '/search')
-    console.log('searchcontainer constructor')
   }
 
   /**
