@@ -96,32 +96,34 @@ export default (submitAction, redirectTo) => {
       }
 
       return (
-        <CenterLayout className={classes.searchContainer}>
-          <form
-            className={classes.container}
-            onChange={this._onFieldChange}
-            onSubmit={this._onSubmit}
-          >
-            <TextField
-              className={classes.input}
-              errorText={formErrors.query}
-              floatingLabelText={props.labelQuery}
-              hintText={props.hintQuery}
-              name='query'
-              value={form.query}
-            />
-            <br />
-            <br />
-            <div className={classes.formActions}>
-              <RaisedButton
-                style={style}
-                primary={true}
-                label={!props.submitting && props.labelSubmit}
-                icon={props.submitting && <Spinner size='small'/>}
-                type='submit'
+        <CenterLayout>
+          <div className={classes.searchContainer}>
+            <form
+              className={classes.container}
+              onChange={this._onFieldChange}
+              onSubmit={this._onSubmit}
+            >
+              <TextField
+                className={classes.input}
+                errorText={formErrors.query}
+                floatingLabelText={props.labelQuery}
+                hintText={props.hintQuery}
+                name='query'
+                value={form.query}
               />
-            </div>
-          </form>
+              <br />
+              <br />
+              <div className={classes.formActions}>
+                <RaisedButton
+                  style={style}
+                  primary={true}
+                  label={!props.submitting && props.labelSubmit}
+                  icon={props.submitting && <Spinner size='small'/>}
+                  type='submit'
+                />
+              </div>
+            </form>
+          </div>
         </CenterLayout>
       )
     }

@@ -1,6 +1,6 @@
 export default {
   errorQuery: 'Invalid email address.',
-  hintQuery: 'Eggs',
+  hintQuery: 'e.g. "Coffee"',
   labelQuery: 'What are you looking for?',
   labelSubmit: 'Search',
 }
