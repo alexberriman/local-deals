@@ -91,13 +91,12 @@ export default (submitAction, redirectTo) => {
       const {form, formErrors} = this.state
 
       const style = {
-        height: 50,
-        width: '100%'
+        width: 280
       }
 
       return (
-        <CenterLayout>
-          <div className={classes.searchContainer}>
+        <div className={classes.searchContainer}>
+          <CenterLayout>
             <form
               className={classes.container}
               onChange={this._onFieldChange}
@@ -106,6 +105,7 @@ export default (submitAction, redirectTo) => {
               <TextField
                 className={classes.input}
                 errorText={formErrors.query}
+                style={style}
                 floatingLabelText={props.labelQuery}
                 hintText={props.hintQuery}
                 name='query'
@@ -123,8 +123,8 @@ export default (submitAction, redirectTo) => {
                 />
               </div>
             </form>
-          </div>
-        </CenterLayout>
+          </CenterLayout>
+        </div>
       )
     }
   }
