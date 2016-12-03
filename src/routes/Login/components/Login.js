@@ -95,12 +95,18 @@ export default (submitAction, redirectTo) => {
       const {props} = this
       const {form, formErrors} = this.state
 
+      const style = {
+        height: 50,
+      }
+
       return (
         <CenterLayout className={classes.loginContainer}>
-          <h1>
-            <strong>{props.loginTitle}</strong>
-          </h1>
-          <h2>{props.loginSubtitle}</h2>
+          <div className={classes.heading}>
+            <h1>
+              <strong>{props.loginTitle}</strong>
+            </h1>
+            <h2>{props.loginSubtitle}</h2>
+          </div>
 
           <form
             className={classes.container}
@@ -127,6 +133,10 @@ export default (submitAction, redirectTo) => {
             <br />
             <div className={classes.formActions}>
               <RaisedButton
+                fullWidth="100%"
+                class="waves-effect waves-light btn-large primary-color block m-20 animated bouncein delay-4"
+                style={style}
+                primary={true}
                 label={!props.submitting && props.labelSubmit}
                 icon={props.submitting && <Spinner size='small'/>}
                 type='submit'
