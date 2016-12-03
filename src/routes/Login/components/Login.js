@@ -4,7 +4,7 @@ import TextField from 'material-ui/TextField'
 
 import CenterLayout from 'layouts/CenterLayout'
 import Spinner from 'components/Spinner'
-import { connectForm, redirectOnSuccess } from 'components/Form/Form'
+import {connectForm, redirectOnSuccess} from 'components/Form/Form'
 
 import classes from './Login.scss'
 import strings from './Login.strings'
@@ -54,8 +54,8 @@ export default (submitAction, redirectTo) => {
      * @private
      */
     _validate() {
-      const { props } = this
-      const { email, password } = this.state.form
+      const {props} = this
+      const {email, password} = this.state.form
       let formErrors = {}
 
       if (!email.length || email.search(this.rxEmail) === -1) {
@@ -80,7 +80,7 @@ export default (submitAction, redirectTo) => {
 
       this.setState({formErrors}, () => {
         if (!Object.keys(formErrors).length) {
-          const { email, password } = this.state.form
+          const {email, password} = this.state.form
           this.props.onSubmit(email, password)
         }
       })
@@ -92,12 +92,14 @@ export default (submitAction, redirectTo) => {
      * @returns {XML}
      */
     render() {
-      const { props } = this
-      const { form, formErrors } = this.state
+      const {props} = this
+      const {form, formErrors} = this.state
 
       return (
         <CenterLayout className={classes.loginContainer}>
-          <h1>{props.loginTitle}</h1>
+          <h1>
+            <strong>{props.loginTitle}</strong>
+          </h1>
           <h2>{props.loginSubtitle}</h2>
 
           <form
@@ -126,7 +128,7 @@ export default (submitAction, redirectTo) => {
             <div className={classes.formActions}>
               <RaisedButton
                 label={!props.submitting && props.labelSubmit}
-                icon={props.submitting && <Spinner size='small' />}
+                icon={props.submitting && <Spinner size='small'/>}
                 type='submit'
               />
             </div>

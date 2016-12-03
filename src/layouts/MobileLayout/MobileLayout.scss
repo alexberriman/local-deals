@@ -13,19 +13,23 @@ $content-height: 100%;
   position: relative;
   width: 100%;
 }
+
 .content {
   overflow-y: auto;
   overflow-x: hidden;
   position: relative;
 }
+
 .contentContainer {
   height: $content-height;
   overflow: hidden;
   padding-bottom: var(--button-height);
 }
+
 .content {
   height: 100%;
 }
+
 .fixedLeft {
   float: left;
   height: 100%;
