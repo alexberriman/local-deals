@@ -35,6 +35,4 @@ SearchForm.propTypes = {
   location: React.PropTypes.object.isRequired
 }
 
-const mapStateToProps = state => ({})
-
-export default connect(mapStateToProps)(SearchContainer)
+export default connect()(DealsContainer)
