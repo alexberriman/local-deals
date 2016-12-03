@@ -1,3 +1,5 @@
+import { push } from 'react-router-redux'
+
 /**
  * Performs a search
  *
@@ -7,8 +9,10 @@
  */
 export function search(query, callback) {
   return (dispatch, getState, api) => {
+    console.log('search query')
+    console.log(callback)
     setTimeout(() => {
-      callback(null)
+      dispatch(push('/search/result'))
     }, 1000)
   }
 }

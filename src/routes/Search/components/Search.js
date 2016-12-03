@@ -72,10 +72,14 @@ export default (submitAction, redirectTo) => {
     _onSubmit(e) {
       e.preventDefault()
       const formErrors = this._validate()
+      console.log('form errors')
+      console.log(formErrors)
 
       this.setState({formErrors}, () => {
         if (!Object.keys(formErrors).length) {
           const {query} = this.state.form
+          console.log('submit')
+          console.log(this.props.onSubmit)
           this.props.onSubmit(query)
         }
       })
