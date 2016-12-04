@@ -41,7 +41,7 @@ export default class NavigationDrawer extends React.Component {
         <div className={classes.menu}>
           <ul>
             <li>
-              <Link to='/' className={classes.link} onClick={this.close}>
+              <Link to='/deals' className={classes.link} onClick={this.close}>
                 <IconHome />
                 <span onClick={this.close} className={classes.text}>
                   {strings.label_home}
