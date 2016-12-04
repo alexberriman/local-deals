@@ -1,5 +1,5 @@
 import React from 'react'
-import { IconBack, IconMenu } from 'components/Icons'
+import {IconBack, IconMenu} from 'components/Icons'
 
 import classes from './Header.scss'
 
@@ -21,7 +21,7 @@ class Header extends React.Component {
    * @private
    */
   _onDrawerClick() {
-    const { displayMenuAsBackButton, onBackButtonClick, onDrawerClick } = this.props
+    const {displayMenuAsBackButton, onBackButtonClick, onDrawerClick} = this.props
     if (displayMenuAsBackButton) {
       onBackButtonClick()
     } else {
@@ -47,20 +47,25 @@ class Header extends React.Component {
         <div className={classes.pullLeft}>
           {
             displayMenuAsBackButton
-            ? <IconBack className={classes.icon} onClick={this._onDrawerClick} />
-            : <IconMenu className={classes.icon} onClick={this._onDrawerClick} />
+              ? <IconBack className={classes.icon} onClick={this._onDrawerClick}/>
+              : <IconMenu className={classes.icon} onClick={this._onDrawerClick}/>
           }
         </div>
         {title &&
-          <h1 className={classes.title}>{title}</h1>
+        <h1 className={classes.title}>{title}</h1>
         }
-        {!contextualOptionsHidden && contextualOptions.length > 0 &&
-          <div className={classes.pullRight}>
-            {contextualOptions.map((option, i) => React.cloneElement(option, {
-              className: `${classes.icon} ${option.className || ''}`,
-              key: option.key || i
-            }))}
+        <div className={classes.pullRight}>
+          <div className={classes.icon}>
+            <a href="/search"><i className="material-icons">search</i></a>
           </div>
+        </div>
+        {!contextualOptionsHidden && contextualOptions.length > 0 &&
+        <div className={classes.pullRight}>
+          {contextualOptions.map((option, i) => React.cloneElement(option, {
+            className: `${classes.icon} ${option.className || ''}`,
+            key: option.key || i
+          }))}
+        </div>
         }
       </nav>
     )
@@ -80,8 +85,10 @@ Header.defaultProps = {
   displayMenuAsBackButton: false,
   contextualOptions: [],
   contextualOptionsHidden: false,
-  onBackButtonClick: () => {},
-  onDrawerClick: () => {},
+  onBackButtonClick: () => {
+  },
+  onDrawerClick: () => {
+  },
   title: ''
 }
 

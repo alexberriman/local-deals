@@ -14,7 +14,7 @@ class LoginContainer extends React.Component {
    */
   constructor(props) {
     super(props)
-    this.LoginForm = LoginForm(login, '/deals')
+    this.LoginForm = LoginForm(login, '/advertiser')
   }
 
   /**

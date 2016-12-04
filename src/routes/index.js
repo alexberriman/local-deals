@@ -20,6 +20,10 @@ import SearchResultRoute from './Search/routes/Result'
 // Routes: Loading
 import LoadingRoute from './Loading'
 
+// Routes: advertiser
+import AdvertiserRoute from './Advertiser'
+
+
 export const createRoutes = (store) => ({
   path: '/',
   indexRoute: {
@@ -41,6 +45,7 @@ export const createRoutes = (store) => ({
     {
       component: MobileLayout,
       childRoutes: [
+        AdvertiserRoute(store),
         DealsRoute(store),
         DealRoute(store),
         DealLocationRoute(store),
