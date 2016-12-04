@@ -34,6 +34,10 @@ export default class DealResultCard extends React.Component {
    */
   render() {
     const {deal} = this.props
+    const titleStyle = {
+      fontSize: 17,
+      lineHeight: '22px'
+    }
 
     return (
       <div
@@ -41,14 +45,19 @@ export default class DealResultCard extends React.Component {
         onClick={this._onClick}
       >
         <Card>
-          <img src={deal.image_url}/>
-          <CardTitle
-            subtitle={<span className={classes.subtitle}><IconPlace />{deal.location}</span>}
-            title={deal.title}
-          />
-          <CardText>
-            {deal.short_desc}
-          </CardText>
+          <div className={classes.left}>
+            <img src={deal.image_url} className={classes.img}/>
+          </div>
+          <div className={classes.right}>
+            <CardTitle
+              subtitle={<span className={classes.subtitle}><IconPlace />{deal.location}</span>}
+              title={deal.title}
+              titleStyle={titleStyle}
+              className={classes.title}
+            />
+            <div className={classes.company}><span>{deal.company}</span></div>
+          </div>
+          <div className={classes.clear}></div>
         </Card>
       </div>
     )
