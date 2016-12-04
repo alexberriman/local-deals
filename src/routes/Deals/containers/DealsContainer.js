@@ -19,6 +19,7 @@ class DealsContainer extends React.Component {
    */
   constructor(props) {
     super(props)
+    console.log(props)
 
     this.state = {
       filteredDeals: props.deals.deals || [],

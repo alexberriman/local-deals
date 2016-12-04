@@ -23,6 +23,7 @@ export function receiveDeals(err, deals) {
  * @returns {function(*, *, *)}
  */
 export function fetchDeals() {
+  console.log('fetch deals')
   return (dispatch, getState, api) => {
     dispatch(requestDeals())
     dispatch(receiveDeals(null, dummyDeals))
@@ -35,6 +36,7 @@ export function fetchDeals() {
  * @returns {function(*, *, *)}
  */
 export function fetchResults() {
+  console.log('fetch results')
   return (dispatch, getState, api) => {
     dispatch(requestDeals())
     dispatch(receiveDeals(null, dummyDeals))

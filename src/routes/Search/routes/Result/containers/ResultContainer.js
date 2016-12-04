@@ -3,9 +3,9 @@ import TextField from 'material-ui/TextField'
 import { connect } from 'react-redux'
 import { push } from 'react-router-redux'
 
-import Result from '../components/Result'
+import Deals from '../components/Result'
 import { IconClose, IconSearch } from 'components/Icons'
-import { fetchResults } from 'store/deals/actions'
+import { fetchDeals } from 'store/deals/actions'
 
 import classes from './ResultContainer.scss'
 import strings from './ResultContainer.strings.js'
@@ -19,12 +19,13 @@ class ResultContainer extends React.Component {
    */
   constructor(props) {
     super(props)
+    console.log(props)
 
     this.state = {
-      filteredResults: props.results.results || [],
+      filteredDeals: props.deals.deals || [],
       searching: false
     }
-    this._onResultClick = ::this._onResultClick
+    this._onDealClick = ::this._onDealClick
     this._onFilterChange = ::this._onFilterChange
     this._toggleSearch = ::this._toggleSearch
   }
@@ -33,34 +34,42 @@ class ResultContainer extends React.Component {
    * Fetches the user's profile.
    */
   componentDidMount() {
-    const { results, fetchResults, layout } = this.props
-    if (!results.loading && !results.results) {
-      fetchResults()
+    const { deals, fetchDeals, layout } = this.props
+    if (!deals.loading && !deals.deals) {
+      fetchDeals()
     }
+    layout.setHeader({
+      contextualOptions: [
+        <IconSearch
+          onClick={this._toggleSearch}
+        />
+      ],
+      title: strings.title
+    })
   }
 
   /**
-   * Updates the results array when new results are received.
+   * Updates the deals array when new deals are received.
    *
    * @param nextProps
    */
   componentWillReceiveProps(nextProps) {
-    const { results } = nextProps
-    if (this.props.results.results === null && results.results) {
+    const { deals } = nextProps
+    if (this.props.deals.deals === null && deals.deals) {
       this.setState({
-        filteredResults: results.results
+        filteredDeals: deals.deals
       })
     }
   }
 
   /**
-   * Navigates to the selected result.
+   * Navigates to the selected deal.
    *
-   * @param result
+   * @param deal
    * @private
    */
-  _onResultClick(result) {
-    this.props.push(`/deal/${result.id}`)
+  _onDealClick(deal) {
+    this.props.push(`/deal/${deal.id}`)
   }
 
   /**
@@ -100,20 +109,20 @@ class ResultContainer extends React.Component {
   }
 
   /**
-   * Updates the result filter.
+   * Updates the deal filter.
    *
    * @param e
    * @private
    */
   _onFilterChange(e) {
     const filter = e.target.value
-    const results = this.props.results.results.filter(result =>
-      Object.keys(result).some(key =>
-        typeof result[key] === 'string' && (new RegExp(filter, 'i').test(result[key]))
+    const deals = this.props.deals.deals.filter(deal =>
+      Object.keys(deal).some(key =>
+        typeof deal[key] === 'string' && (new RegExp(filter, 'i').test(deal[key]))
       )
     )
     this.setState({
-      filteredResults: results
+      filteredDeals: deals
     })
   }
 
@@ -123,10 +132,10 @@ class ResultContainer extends React.Component {
    * @returns {*}
    */
   render() {
-    const { results } = this.props
-    const { filteredResults } = this.state
+    const { deals } = this.props
+    const { filteredDeals } = this.state
 
-    if (results.loading || !results.results) {
+    if (deals.loading || !deals.deals) {
       return null
     }
 
@@ -134,26 +143,26 @@ class ResultContainer extends React.Component {
       <div>
         <Deals
           {...this.props}
-          deals={filteredResults}
-          onDealClick={this._onResultClick}
+          deals={filteredDeals}
+          onDealClick={this._onDealClick}
         />
       </div>
     )
   }
 }
 ResultContainer.propTypes = {
-  results: React.PropTypes.object.isRequired,
-  fetchResults: React.PropTypes.func.isRequired,
+  deals: React.PropTypes.object.isRequired,
+  fetchDeals: React.PropTypes.func.isRequired,
   layout: React.PropTypes.object.isRequired,
   push: React.PropTypes.func.isRequired
 }
 
 const mapStateToProps = state => ({
-  results: state.results
+  deals: state.deals
 })
 
 const mapDispatchToProps = {
-  fetchResults,
+  fetchDeals,
   push
 }
 

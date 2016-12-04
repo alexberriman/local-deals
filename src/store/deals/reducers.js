@@ -6,7 +6,8 @@ import {
 const initialState = {
   deals: null,
   error: null,
-  loading: false
+  loading: false,
+  lorem: 'ipsum'
 }
 
 export default function dealsReducer(state = initialState, action) {
@@ -15,14 +16,16 @@ export default function dealsReducer(state = initialState, action) {
       return {
         ...state,
         ...initialState,
-        loading: true
+        loading: true,
+        lorem2: 'ipsum2'
       }
     case RECEIVE_DEALS:
       return {
         ...state,
         deals: action.payload,
         error: action.error,
-        loading: false
+        loading: false,
+        lorem1: 'ipsum1'
       }
     default:
       return state

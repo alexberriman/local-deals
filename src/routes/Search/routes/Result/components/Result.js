@@ -7,18 +7,18 @@ import classes from './Result.scss'
 export default class Result extends React.Component {
 
   /**
-   * Renders the Result component.
+   * Renders the Deals component.
    */
   render() {
-    const { results, onResultClick } = this.props
+    const { deals, onDealClick } = this.props
 
     return (
       <div className={classes.container}>
-        {results.map(result =>
+        {deals.map(deal =>
           <DealCard
-            deal={result}
-            key={result.id}
-            onClick={onResultClick}
+            deal={deal}
+            key={deal.id}
+            onClick={onDealClick}
           />
         )}
       </div>
@@ -26,9 +26,9 @@ export default class Result extends React.Component {
   }
 }
 Result.propTypes = {
-  results: React.PropTypes.array.isRequired,
-  onResultClick: React.PropTypes.func
+  deals: React.PropTypes.array.isRequired,
+  onDealClick: React.PropTypes.func
 }
 Result.defaultProps = {
-  onResultClick: () => {}
+  onDealClick: () => {}
 }
