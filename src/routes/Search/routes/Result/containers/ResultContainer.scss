@@ -9,3 +9,26 @@
   top: -5px;
 }
 
+.searchOptions {
+  select {
+    background: #fff url(//cdnil20.fiverrcdn.com/assets/v2_globals/icn-mobile-select-caret-a5a45a4cc3368bbc93c4594993d19a2d.svg) no-repeat center right 10px;
+    padding: 7px 25px 9px 10px;
+    color: #555555;
+    border: medium none;
+    border-bottom: 3px #eee solid;
+    margin: 0;
+    box-sizing: border-box;
+    width: 50%;
+    border-radius: 0;
+    float: left;
+    min-height: 50px;
+  }
+
+  select + select {
+    border-left: 2px solid #eee;
+  }
+}
+
+.clear {
+  clear: both;
+}

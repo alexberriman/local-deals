@@ -97,9 +97,29 @@ class ResultContainer extends React.Component {
       return null
     }
 
+    const defaultValue = ''
+
     return (
       <div>
         <SearchMap/>
+        <div className={classes.searchOptions}>
+          <select defaultValue={defaultValue}>
+            <option value="">Search radius</option>
+            <option value="1">&lt;1km</option>
+            <option value="2">&lt;2km</option>
+            <option value="5">&lt;5km</option>
+            <option value="10">&lt;10km</option>
+            <option value="20">&lt;20km</option>
+          </select>
+          <select defaultValue={defaultValue}>
+            <option value="">Sort by</option>
+            <option value="locality">Locality</option>
+            <option value="expiry">Date expiring</option>
+            <option value="added">Date added</option>
+            <option value="relevancy">Relevancy</option>
+          </select>
+          <div className={classes.clear}></div>
+        </div>
         <Deals
           {...this.props}
           deals={filteredDeals}
