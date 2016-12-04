@@ -4,6 +4,7 @@ import { Link } from 'react-router'
 
 import {
   IconAddUser,
+  IconAdvertiser,
   IconHome,
   IconLeaderboard,
   IconLogout,
@@ -56,10 +57,10 @@ export default class NavigationDrawer extends React.Component {
               </Link>
             </li>
             <li>
-              <Link to='/logout' className={classes.link} onClick={this.close}>
-                <IconLogout />
+              <Link to='/login' className={classes.link} onClick={this.close}>
+                <IconAdvertiser />
                 <span onClick={this.close} className={classes.text}>
-                  {strings.label_logout}
+                  {strings.label_advertiser_login}
                 </span>
               </Link>
             </li>

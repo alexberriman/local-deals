@@ -56,6 +56,9 @@ const createIcon = (props, name) =>
 export const IconAdd = props =>
   createIcon(props, 'add')
 
+export const IconAdvertiser = props =>
+  createIcon(props, 'account_box')
+
 export const IconBack = props =>
   createIcon(props, 'arrow_back')
 
