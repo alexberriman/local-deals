@@ -13,21 +13,26 @@ export default class Deal extends React.Component {
   render() {
     const {deal} = this.props
 
+    let images = null;
+    if (deal.images.length > 0) {
+      images = deal.images.map(function (img) {
+        return (
+          <li>
+            <img src={img.src}/>
+          </li>
+        )
+      })
+    }
+
     return (
       <div className={classes.container}>
         <img src={deal.image_url}/>
 
-        <ul className={classes.images}>
-          {
-            deal.images.map(function (img) {
-              return (
-                <li>
-                  <img src={img.src}/>
-                </li>
-              )
-            })
-          }
-        </ul>
+        {deal.images.length > 0 &&
+          <ul className={classes.images}>
+            {images}
+          </ul>
+        }
         <div class={classes.clearFix}></div>
 
         <h2 className={classes.title}>{deal.title}</h2>
