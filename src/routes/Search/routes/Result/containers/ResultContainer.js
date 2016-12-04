@@ -38,11 +38,6 @@ class ResultContainer extends React.Component {
       fetchDeals()
     }
     layout.setHeader({
-      contextualOptions: [
-        <IconSearch
-          onClick={this._toggleSearch}
-        />
-      ],
       title: strings.title
     })
   }
