@@ -1,6 +1,6 @@
 import React from 'react'
 
-import DealCard from 'components/DealCard'
+import DealResultCard from 'components/DealResultCard'
 
 import classes from './Result.scss'
 
@@ -15,7 +15,7 @@ export default class Result extends React.Component {
     return (
       <div className={classes.container}>
         {deals.map(deal =>
-          <DealCard
+          <DealResultCard
             deal={deal}
             key={deal.id}
             onClick={onDealClick}
