@@ -6,6 +6,7 @@ import { push } from 'react-router-redux'
 import Deals from '../components/Result'
 import { IconClose, IconSearch } from 'components/Icons'
 import { fetchDeals } from 'store/deals/actions'
+import SearchMap from 'components/SearchMap'
 
 import classes from './ResultContainer.scss'
 import strings from './ResultContainer.strings.js'
@@ -98,6 +99,7 @@ class ResultContainer extends React.Component {
 
     return (
       <div>
+        <SearchMap/>
         <Deals
           {...this.props}
           deals={filteredDeals}
