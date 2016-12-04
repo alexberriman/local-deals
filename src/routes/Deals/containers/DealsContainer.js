@@ -21,12 +21,11 @@ class DealsContainer extends React.Component {
     super(props)
 
     this.state = {
-      filteredDeals: props.deals.deals || [],
-      searching: false
+      filteredDeals: props.deals.deals || []
+
     }
     this._onDealClick = ::this._onDealClick
     this._onFilterChange = ::this._onFilterChange
-    this._toggleSearch = ::this._toggleSearch
   }
 
   /**
@@ -38,11 +37,6 @@ class DealsContainer extends React.Component {
       fetchDeals()
     }
     layout.setHeader({
-      contextualOptions: [
-        <IconSearch
-          onClick={this._toggleSearch}
-        />
-      ],
       title: strings.title
     })
   }
@@ -69,42 +63,6 @@ class DealsContainer extends React.Component {
    */
   _onDealClick(deal) {
     this.props.push(`/deal/${deal.id}`)
-  }
-
-  /**
-   * Toggles the search bar.
-   *
-   * @private
-   */
-  _toggleSearch() {
-    this.setState({
-      searching: !this.state.searching
-    }, () => {
-      let search =
-        <IconSearch
-          onClick={this._toggleSearch}
-        />
-
-      if (this.state.searching) {
-        search =
-          <div>
-            <div className={classes.search}>
-              <TextField
-                name='search'
-                onChange={this._onFilterChange}
-                ref={c => c !== null && c.focus()}
-              />
-              <IconClose
-                onClick={this._toggleSearch}
-              />
-            </div>
-          </div>
-      }
-
-      this.props.layout.updateHeader({
-        contextualOptions: [search]
-      })
-    })
   }
 
   /**
