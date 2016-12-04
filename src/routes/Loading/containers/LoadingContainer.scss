@@ -1,0 +1,20 @@
+.loadingContainer {
+  height: 100%;
+  background-color: #1f2532;
+  background-image: linear-gradient(343deg, #4c68b1, black 98%);
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 30%;
+
+  h1 {
+    font-family: 'Roboto', sans-serif !important;
+    color: #fff;
+    font-size: 36px;
+    font-weight: normal;
+  }
+}

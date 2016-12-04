@@ -1,4 +1,5 @@
 // Layouts
+import LoadingLayout from 'layouts/LoadingLayout'
 import MobileLayout from 'layouts/MobileLayout'
 import NoAuthLayout from 'layouts/NoAuthLayout'
 
@@ -16,6 +17,9 @@ import DealLocationRoute from './Deals/routes/Location'
 import SearchRoute from './Search'
 import SearchResultRoute from './Search/routes/Result'
 
+// Routes: Loading
+import LoadingRoute from './Loading'
+
 export const createRoutes = (store) => ({
   path: '/',
   indexRoute: {
@@ -26,6 +30,12 @@ export const createRoutes = (store) => ({
       component: NoAuthLayout,
       childRoutes: [
         LoginRoute(store)
+      ]
+    },
+    {
+      component: LoadingLayout,
+      childRoutes: [
+        LoadingRoute(store)
       ]
     },
     {
