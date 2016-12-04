@@ -19,7 +19,6 @@ class ResultContainer extends React.Component {
    */
   constructor(props) {
     super(props)
-    console.log(props)
 
     this.state = {
       filteredDeals: props.deals.deals || [],
