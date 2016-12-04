@@ -18,3 +18,14 @@
     font-weight: normal;
   }
 }
+
+.loading {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 60%;
+
+  img {
+    width: 50px;
+  }
+}
