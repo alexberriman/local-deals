@@ -26,7 +26,6 @@ class ResultContainer extends React.Component {
     }
     this._onDealClick = ::this._onDealClick
     this._onFilterChange = ::this._onFilterChange
-    this._toggleSearch = ::this._toggleSearch
   }
 
   /**
@@ -64,42 +63,6 @@ class ResultContainer extends React.Component {
    */
   _onDealClick(deal) {
     this.props.push(`/deal/${deal.id}`)
-  }
-
-  /**
-   * Toggles the search bar.
-   *
-   * @private
-   */
-  _toggleSearch() {
-    this.setState({
-      searching: !this.state.searching
-    }, () => {
-      let search =
-        <IconSearch
-          onClick={this._toggleSearch}
-        />
-
-      if (this.state.searching) {
-        search =
-          <div>
-            <div className={classes.search}>
-              <TextField
-                name='search'
-                onChange={this._onFilterChange}
-                ref={c => c !== null && c.focus()}
-              />
-              <IconClose
-                onClick={this._toggleSearch}
-              />
-            </div>
-          </div>
-      }
-
-      this.props.layout.updateHeader({
-        contextualOptions: [search]
-      })
-    })
   }
 
   /**
