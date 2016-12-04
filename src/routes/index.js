@@ -23,7 +23,7 @@ import LoadingRoute from './Loading'
 export const createRoutes = (store) => ({
   path: '/',
   indexRoute: {
-    onEnter: (nextState, replace) => replace('/deals')
+    onEnter: (nextState, replace) => replace('/loading')
   },
   childRoutes: [
     {

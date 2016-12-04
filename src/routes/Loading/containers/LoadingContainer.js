@@ -5,6 +5,12 @@ import classes from './LoadingContainer.scss'
 
 class LoadingContainer extends React.Component {
 
+  componentDidMount() {
+    setTimeout(() => {
+      window.location = '/deals'
+    }, 3000)
+  }
+
   /**
    * Renders the loading component.
    *
