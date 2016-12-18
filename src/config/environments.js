@@ -13,7 +13,7 @@ export default {
     proxy: {
       enabled: false,
       options: {
-        host: 'http://localhost:8000',
+        host: 'http://192.168.10.10:8000',
         match: /^\/api\/.*/
       }
     }

@@ -4,7 +4,8 @@ import _debug from 'debug'
 import { argv } from 'yargs'
 import ip from 'ip'
 
-const localip = ip.address()
+//const localip = ip.address()
+const localip = '192.168.10.10'
 const debug = _debug('app:config')
 debug('Creating default configuration.')
 
