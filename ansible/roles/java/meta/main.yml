@@ -1,43 +1,15 @@
 ---
-# file: oracle-java/meta/main.yml
-#
-# meta file
-#
-
 galaxy_info:
-  author: Pedro Salgado
-  description: Role to install Oracle Java.
-  company: ansiblebit.org
+  author: Kevin Brebanov
+  description: Installs Java
+  company:
   license: BSD
-  min_ansible_version: 1.9.4
+  min_ansible_version: 1.9
   platforms:
-    - name: CentOS
-      versions:
-        - all
-        - any
-        - 7
-        - 6
-    - name: Debian
-      versions:
-        - jessie
-        - wheezy
-    - name: RedHat
-      versions:
-        - all
-        - any
-        - 7
-        - 6
     - name: Ubuntu
       versions:
-        - xenial
-        - vivid
         - trusty
-        - precise
+        - xenial
   galaxy_tags:
     - development
-    - java
-    - system
-
-dependencies:
-  - role: ansiblebit.launchpad-ppa-webupd8
-    when: ansible_distribution | lower == 'debian' or ansible_distribution | lower == 'ubuntu'
+dependencies: []
