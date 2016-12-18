@@ -2,6 +2,8 @@
 - hosts: all
   become: yes
   roles:
+    - server
+    - vagrant_local
     - elasticsearch
     - mongodb
     - nodejs
