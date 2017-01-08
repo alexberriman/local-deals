@@ -11,12 +11,19 @@ import FontAwesome from "react-fontawesome"
 
 import classes from './SearchMap.scss'
 
+const position = {
+  lat: -33.675960,
+  long: 151.306530
+}
+
+const defaultZoom = 14
+
 const SearchResultMap = withScriptjs(
   withGoogleMap(props => (
     <GoogleMap
       ref={props.onMapLoad}
-      defaultZoom={3}
-      defaultCenter={{lat: -25.363882, lng: 131.044922}}
+      defaultZoom={defaultZoom}
+      defaultCenter={{lat: position.lat, lng: position.long}}
       onClick={props.onMapClick}
     >
 
@@ -25,6 +32,16 @@ const SearchResultMap = withScriptjs(
 )
 
 export default class SearchMap extends React.Component {
+  componentDidMount() {
+    console.log('component mounted')
+
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        console.log(position)
+      }
+    )
+  }
+
   _lorem() {
     console.log('lorem ipsum')
   }
@@ -36,7 +53,7 @@ export default class SearchMap extends React.Component {
           googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp"
           loadingElement={
             <div style={{height: `100%`}}>
-              <FontAwesome name='rocket' />
+              <FontAwesome name='rocket'/>
             </div>
           }
           containerElement={
