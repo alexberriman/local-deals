@@ -2,7 +2,11 @@
   {
     "id": 1,
     "title": "Free bagel with large coffee",
-    "location": "210 George St, Sydney, NSW, 2000",
+    "location": "13 Orana Road, Mona Vale",
+    "position": {
+      "lat": -33.673052,
+      "long": 151.314886
+    },
     "company": "Mum and Dad's Coffee Shack",
     "short_desc": "Pellentesque vehicula magna ligula, quis malesuada arcu viverra et.",
     "description": "Pellentesque vehicula magna ligula, quis malesuada arcu viverra et. Nam sit amet aliquet ipsum, cursus lobortis arcu. Nunc et cursus lorem. Aliquam facilisis ullamcorper luctus. Fusce nec scelerisque quam. Aliquam sit amet lectus magna.",
@@ -23,6 +27,10 @@
   {
     "id": 2,
     "title": "Bacon & Egg Roll + Coffee $5",
+    "position": {
+      "lat": -33.679581,
+      "long": 151.313549
+    },
     "short_desc": "Pellentesque vehicula magna ligula, quis malesuada arcu viverra et.",
     "description": "A really long description about bowling etc.",
     "company": "Gloria Jeans",
@@ -34,6 +42,10 @@
   {
     "id": 3,
     "title": "3 hours of Paintball fun just $39",
+    "position": {
+      "lat": -33.675577,
+      "long": 151.302283
+    },
     "short_desc": "Pellentesque vehicula magna ligula, quis malesuada arcu viverra et.",
     "description": "Includes pizza, 50 paintballs and equipment hire.",
     "company": "Baker's Delight",
