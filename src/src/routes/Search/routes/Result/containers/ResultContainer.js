@@ -1,11 +1,11 @@
 import React from 'react'
 import TextField from 'material-ui/TextField'
-import { connect } from 'react-redux'
-import { push } from 'react-router-redux'
+import {connect} from 'react-redux'
+import {push} from 'react-router-redux'
 
 import Deals from '../components/Result'
-import { IconClose, IconSearch } from 'components/Icons'
-import { fetchDeals } from 'store/deals/actions'
+import {IconClose, IconSearch} from 'components/Icons'
+import {fetchDeals} from 'store/deals/actions'
 import SearchMap from 'components/SearchMap'
 
 import classes from './ResultContainer.scss'
@@ -33,7 +33,7 @@ class ResultContainer extends React.Component {
    * Fetches the user's profile.
    */
   componentDidMount() {
-    const { deals, fetchDeals, layout } = this.props
+    const {deals, fetchDeals, layout} = this.props
     if (!deals.loading && !deals.deals) {
       fetchDeals()
     }
@@ -48,7 +48,7 @@ class ResultContainer extends React.Component {
    * @param nextProps
    */
   componentWillReceiveProps(nextProps) {
-    const { deals } = nextProps
+    const {deals} = nextProps
     if (this.props.deals.deals === null && deals.deals) {
       this.setState({
         filteredDeals: deals.deals
@@ -84,14 +84,28 @@ class ResultContainer extends React.Component {
     })
   }
 
+  markers(deals) {
+    let markers = [];
+    for (let deal of deals) {
+      markers.push({
+        position: deal.position,
+        key: deal.company,
+        defaultAnimation: 2,
+      })
+    }
+
+    return markers
+  }
+
   /**
    * Renders the Navigation Drawer.
    *
    * @returns {*}
    */
   render() {
-    const { deals } = this.props
-    const { filteredDeals } = this.state
+    const {deals} = this.props
+    const {filteredDeals} = this.state
+    const markers = this.markers(filteredDeals)
 
     if (deals.loading || !deals.deals) {
       return null
@@ -101,7 +115,7 @@ class ResultContainer extends React.Component {
 
     return (
       <div>
-        <SearchMap/>
+        <SearchMap markers={markers}/>
         <div className={classes.searchOptions}>
           <select defaultValue={defaultValue}>
             <option value="">Search radius</option>

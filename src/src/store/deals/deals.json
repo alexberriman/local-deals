@@ -5,7 +5,7 @@
     "location": "13 Orana Road, Mona Vale",
     "position": {
       "lat": -33.673052,
-      "long": 151.314886
+      "lng": 151.314886
     },
     "company": "Mum and Dad's Coffee Shack",
     "short_desc": "Pellentesque vehicula magna ligula, quis malesuada arcu viverra et.",
@@ -29,7 +29,7 @@
     "title": "Bacon & Egg Roll + Coffee $5",
     "position": {
       "lat": -33.679581,
-      "long": 151.313549
+      "lng": 151.313549
     },
     "short_desc": "Pellentesque vehicula magna ligula, quis malesuada arcu viverra et.",
     "description": "A really long description about bowling etc.",
@@ -44,7 +44,7 @@
     "title": "3 hours of Paintball fun just $39",
     "position": {
       "lat": -33.675577,
-      "long": 151.302283
+      "lng": 151.302283
     },
     "short_desc": "Pellentesque vehicula magna ligula, quis malesuada arcu viverra et.",
     "description": "Includes pizza, 50 paintballs and equipment hire.",
