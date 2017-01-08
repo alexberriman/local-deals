@@ -42,8 +42,16 @@ export default class SearchMap extends React.Component {
     )
   }
 
-  _lorem() {
-    console.log('lorem ipsum')
+  clicked() {
+    console.log('map clicked')
+  }
+
+  mapLoaded() {
+    console.log('map loaded')
+  }
+
+  markerClicked() {
+    console.log('marker clicked')
   }
 
   render() {
@@ -62,9 +70,9 @@ export default class SearchMap extends React.Component {
           mapElement={
             <div style={{height: `100%`}}/>
           }
-          onMapLoad={this._lorem}
-          onMapClick={this._lorem}
-          onMarkerRightClick={this._lorem}
+          onMapLoad={this.mapLoaded}
+          onMapClick={this.clicked}
+          onMarkerRightClick={this.markedClicked}
         />
       </div>
     )
