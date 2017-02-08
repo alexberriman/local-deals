@@ -8,7 +8,7 @@ class LoadingContainer extends React.Component {
   componentDidMount() {
     setTimeout(() => {
       window.location = '/deals'
-    }, 3000)
+    }, 4000)
   }
 
   /**
@@ -20,11 +20,8 @@ class LoadingContainer extends React.Component {
     return (
       <div className={classes.loadingContainer}>
         <div className={classes.title}>
-          <h1>ShopEye</h1>
-          <h2>Local deals and promotions</h2>
-        </div>
-        <div className={classes.loading}>
-          <img src="/img/loading.svg"/>
+          <img src="/img/logo.png"/>
+          <h1><span>Shop</span> Eye</h1>
         </div>
       </div>
     )
